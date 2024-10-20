@@ -86,7 +86,7 @@ const FormApp : React.FC = () => {
             </div>
         )}
         <footer>
-            <p className="text-center">Return to <Link to="/">Homepage</Link></p>
+            <p className="text-center py-5">Return to <Link to="/">Homepage</Link></p>
         </footer>
         </div>
     );

@@ -5,7 +5,6 @@ import HomePage from './components/HomePage';
 import NotesApp from './components/NotesApp';
 import FormApp from './components/FormApp';
 import TodoList from './components/TodoList';
-import RecipeFinder from './components/RecipeFinder';
 import WeatherApp from './components/WeatherApp';
 
 const App: React.FC = () => {
@@ -17,7 +16,6 @@ const App: React.FC = () => {
           <Route path="/form" element={<FormApp/>} />
           <Route path="/notes" element={<NotesApp/>} />
           <Route path="/todo" element={<TodoList/>} />
-          <Route path="/recipe" element={<RecipeFinder/>} />
           <Route path="/weather" element={<WeatherApp/>} />
         </Routes>
       </Router>

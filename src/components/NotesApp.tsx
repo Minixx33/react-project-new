@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Note from './NoteProps';
 import { Container, Button, Card } from "react-bootstrap";
 import TextField from "@mui/material/TextField";
+import {Link} from "react-router-dom";
 
 const NotesApp : React.FC = () => {
     
@@ -65,6 +66,9 @@ const NotesApp : React.FC = () => {
                     <Note key={note.id} note={note} onDelete={deleteNote} onEdit={editNote} />
                 ))}
             </div>
+            <footer>
+            <p className="text-center py-5">Return to <Link to="/">Homepage</Link></p>
+            </footer>
         </Container>
     );
 }

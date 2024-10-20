@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const HomePage : React.FC = () => {
+    const gif = `${process.env.PUBLIC_URL}/assets/club-penguin-dance.gif`;
+
     return (
     <div className="container bg-dark text-light">
         <header>
@@ -10,13 +14,16 @@ const HomePage : React.FC = () => {
             <div className="row">
                 <div className="col"><Link to="/form">Form App</Link></div>
                 <div className="col"><Link to="/notes">Notes App</Link></div>
-                <div className="col"><Link to="/recipefinder">Recipe Finder</Link></div>
                 <div className="col"><Link to="/todo">ToDo List</Link></div>
                 <div className="col"><Link to="/weather">Weather App</Link></div>
             </div>
         </nav>
         <div className="container-sm">
             <p className="text-center">Welcome to the homepage of my first react project!</p>
+            <figure className="text-center">
+                    <img src={gif} alt="Just a fun little gif :)" className="img-fluid w-50 rounded-3" />
+                    <figcaption className="mt-2">Just a fun little GIF :)</figcaption>
+            </figure>            
             <p className="text-center">Made by Yasmine Tohamy</p>
         </div>
     </div>
