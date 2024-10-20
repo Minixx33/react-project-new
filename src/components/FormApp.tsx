@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import {Link} from "react-router-dom";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 //Simple Form Validation App
 const FormApp : React.FC = () => {
@@ -38,12 +39,12 @@ const FormApp : React.FC = () => {
     const [isSubmitted, setIsSubmitted] = useState(false);
     
     return (
-        <div className="FormApp">  
-        <h1>Simple Form App</h1>
+        <div className="container bg-dark text-light py-3">  
+        <h1 className="mb-4 text-center">Simple Form Validation App</h1>
         <form noValidate>
-            <label>
-                Email
-                <input type="email" name="email" onChange={
+            <div className="form-group mb-3">
+            <label className="form-label">Email </label>
+                <input type="email" name="email" className="form-control" onChange={
                     event=> {
                         setInputs({...inputs, email: event.target.value})
                         setErrors(validate({...inputs, email: event.target.value}))
@@ -52,11 +53,12 @@ const FormApp : React.FC = () => {
                 onBlur={() => setSubmitted({...submitted, email: true})}
                 value={inputs.email}
                 />
-                {errors.email && submitted.email ? <p>{errors.email}</p> : null}
-            </label>
-            <label>
-                Password
-                <input type="password" name="password" onChange={
+                {errors.email && submitted.email ? <p className="alert alert-danger">{errors.email}</p> : null}
+            
+            </div>
+            <div className="form-group mb-3">
+            <label className="form-label">Password </label>
+                <input type="password" name="password" className="form-control" onChange={
                     event=> {
                         setInputs({...inputs, password: event.target.value})
                         setErrors(validate({...inputs, password: event.target.value}))
@@ -65,9 +67,10 @@ const FormApp : React.FC = () => {
                 onBlur={() => setSubmitted({...submitted, password: true})}
                 value={inputs.password}
                 />
-                {errors.password && submitted.password ? <p>{errors.password}</p> : null}
-            </label>
-            <button className="submitButton" onClick={event => {
+                {errors.password && submitted.password ? <p className="alert alert-danger">{errors.password}</p> : null}
+            </div>
+            <div className="text-center">
+            <button className="btn btn-primary" onClick={event => {
                 event.preventDefault()
                 if(Object.keys(errors).length == 0)
                 {
@@ -75,15 +78,15 @@ const FormApp : React.FC = () => {
                 }
             }}>
                 Submit
-            </button>
+            </button></div>
         </form>
         {isSubmitted && (
-            <div className="success">
-                <p>Form submitted successfully!</p>
+            <div className="success text-center py-4">
+                <p className="alert alert-success">Form submitted successfully!</p>
             </div>
         )}
         <footer>
-            <p>Return to <Link to="/">Homepage</Link></p>
+            <p className="text-center">Return to <Link to="/">Homepage</Link></p>
         </footer>
         </div>
     );

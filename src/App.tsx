@@ -10,7 +10,7 @@ import WeatherApp from './components/WeatherApp';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className="App bg-dark text-light min-vh-100">
       <Router>
         <Routes>
           <Route path="/" element={<HomePage/>} />
