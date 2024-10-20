@@ -4,7 +4,7 @@ const HomePage : React.FC = () => {
     return (
     <div className="container bg-dark text-light">
         <header>
-            <h1 className="mb-4 text-light text-center">Home Page</h1>
+            <h1 className="mb-4 text-light text-center py-3">Home Page</h1>
         </header>
         <nav className="container text-center bg-indigo-100 py-3 mb-4 border-primary rounded-3">
             <div className="row">
