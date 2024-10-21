@@ -27,7 +27,7 @@ const NotesApp : React.FC = () => {
 
     const editNote = (id: string, newContent: string) => {
         const updatedNotes = notes.map((note) =>
-            note.id === id ? {...note, text: newContent} : note
+            note.id === id ? {...note, content: newContent} : note
         );
         setNotes(updatedNotes);
     }

@@ -12,9 +12,9 @@ const HomePage : React.FC = () => {
         </header>
         <nav className="container text-center bg-indigo-100 py-3 mb-4 border-primary rounded-3">
             <div className="row">
-                <div className="col"><Link to="/form">Form App</Link></div>
+                <div className="col"><Link to="/form">Form Validation App</Link></div>
                 <div className="col"><Link to="/notes">Notes App</Link></div>
-                <div className="col"><Link to="/todo">ToDo List</Link></div>
+                <div className="col"><Link to="/todo">ToDo App</Link></div>
                 <div className="col"><Link to="/weather">Weather App</Link></div>
             </div>
         </nav>
@@ -24,7 +24,7 @@ const HomePage : React.FC = () => {
                     <img src={gif} alt="Just a fun little gif :)" className="img-fluid w-50 rounded-3" />
                     <figcaption className="mt-2">Just a fun little GIF :)</figcaption>
             </figure>            
-            <p className="text-center">Made by Yasmine Tohamy</p>
+            <h4 className="text-center py-5">Made by Yasmine Tohamy</h4>
         </div>
     </div>
     );
