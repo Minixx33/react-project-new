@@ -21,7 +21,7 @@ interface WeatherData {
 //simple weather app that uses openweathermap api
 const WeatherApp : React.FC = () => {
     
-    const apiKey = '7f5e3331c1acf222c290baed9c49eb39';
+    const apiKey = process.env.REACT_APP_API_KEY;
 
     const [weather, setWeather] = useState<WeatherData | null>(null);
     const [city, setCity] = useState<string>('');
