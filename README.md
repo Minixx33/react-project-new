@@ -1,7 +1,7 @@
 # React Project
 
 This project contains 5 pages:
-1. Homepage
+1. Homepage (routes to all other pages)
 2. ToDo App
 3. A simple Form Validation app
 4. Notes App 
