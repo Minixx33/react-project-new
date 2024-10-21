@@ -94,3 +94,5 @@ const FormApp : React.FC = () => {
 
 
 export default FormApp;
+
+// used my own styling for this app. I wanted to try bootstrap without copying a design

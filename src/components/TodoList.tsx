@@ -99,7 +99,7 @@ const TodoList : React.FC = () => {
                     </div>
                     <footer>
                     <p className="text-center py-5">Return to <Link to="/">Homepage</Link></p>
-                </footer>
+                    </footer>
                 </div>
             </div>
         </section>
@@ -107,3 +107,5 @@ const TodoList : React.FC = () => {
 }
 
 export default TodoList;
+
+//styling based on https://mdbootstrap.com/docs/standard/extended/to-do-list/

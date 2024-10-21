@@ -93,3 +93,5 @@ const Note: React.FC<NoteProps> = ({ note, onDelete, onEdit }) => {
 
 // Export the Note component
 export default Note;
+
+// styling based on https://mdbootstrap.com/docs/standard/extended/to-do-list/
